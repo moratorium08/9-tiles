@@ -35,9 +35,14 @@ export default {
       return tile.tail;
     },
     onFlip(i, j) {
-      console.log('Board');
       this.$emit('onFlip', i, j);
     },
   },
 };
 </script>
+
+<style>
+.board {
+  display: inline-block;
+}
+</style>

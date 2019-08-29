@@ -1,5 +1,5 @@
 <template>
-  <button v-bind:class="tileType" type="button" v-on:click="onClick">{{color}}</button>
+  <button v-bind:class="tileType" class="tile" type="button" v-on:click="onClick"></button>
 </template>
 
 <script>
@@ -12,9 +12,33 @@ export default {
   },
   methods: {
     onClick() {
-      console.log('tile');
       this.$emit('onFlip', this.posX, this.posY);
     },
   },
 };
 </script>
+
+<style>
+.YellowTile {
+  background-color: yellow;
+}
+.GreenTile {
+  background-color: green;
+}
+.BlueTile {
+  background-color: blue;
+}
+.OrangeTile {
+  background-color: orange;
+}
+.PinkTile {
+  background-color: pink;
+}
+.BrownTile {
+  background-color: brown;
+}
+.tile {
+  height: 50px;
+  width: 50px;
+}
+</style>
